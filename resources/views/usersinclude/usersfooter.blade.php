@@ -76,18 +76,18 @@
 		</div>
 	</div>
 
-	<script src="js/jquery-3.4.1.min.js"></script>
-	<script src="js/popper.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/owl.carousel.min.js"></script>
-	<script src="js/jquery.animateNumber.min.js"></script>
-	<script src="js/jquery.waypoints.min.js"></script>
-	<script src="js/jquery.fancybox.min.js"></script>
-	<script src="js/aos.js"></script>
-	<script src="js/moment.min.js"></script>
-	<script src="js/daterangepicker.js"></script>
+	<script src="{{asset ('js/jquery-3.4.1.min.js') }}"></script>
+	<script src="{{asset ('js/popper.min.js') }}"></script>
+	<script src="{{asset ('js/bootstrap.min.js') }}"></script>
+	<script src="{{asset ('js/owl.carousel.min.js') }}"></script>
+	<script src="{{asset ('js/jquery.animateNumber.min.js') }}"></script>
+	<script src="{{asset ('js/jquery.waypoints.min.js') }}"></script>
+	<script src="{{asset ('js/jquery.fancybox.min.js') }}"></script>
+	<script src="{{asset ('js/aos.js') }}"></script>
+	<script src="{{asset ('js/moment.min.js') }}"></script>
+	<script src="{{asset ('js/daterangepicker.js') }}"></script>
 
-	<script src="js/typed.js"></script>
+	<script src="{{asset ('js/typed.js') }}"></script>
 	<script>
 		$(function() {
 			var slides = $('.slides'),
@@ -117,4 +117,4 @@
 		})
 	</script>
 
-	<script src="js/custom.js"></script>
+	<script src="{{asset ('js/custom.js') }}"></script>

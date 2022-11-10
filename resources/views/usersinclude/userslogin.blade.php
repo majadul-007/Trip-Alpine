@@ -21,11 +21,14 @@
                 <div class="form-group">
 
                   <label class="text-black" for="email">Email address</label>
-                  <input type="email" name="email" value="{{old('email')}}" class="form-control" id="email">
+                  <input type="email" name="email" value="<?php if(isset($_COOKIE['remember'])) {echo $_COOKIE['remember'];} ?>" class="form-control" id="email">
                   @error("email")
                   <span class="text-denger">{{$message}}</span>
                   @enderror
                 </div>
+                <span>
+						{{Cookie::get('name')}}
+				</span>
               </div>
               <div class="col-8">
                 <div class="form-group">

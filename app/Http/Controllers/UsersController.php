@@ -78,52 +78,62 @@ class UsersController extends Controller
 
     }
 
-    public function loginSubmit(Request $req){
+    // public function loginSubmit(Request $req){
         
-        $traveluser = traveluser::where('email', $req->email)->where('password', $req->password)->first();
+    //     $traveluser = traveluser::where('email', $req->email)->where('password', $req->password)->first();
 
-        if($traveluser){
-            session()->put('', $traveluser->email);
-            if($req->remember){
-                // setcookie('remember', $req->phone,time()+3600);
-                Cookie::queue('name', $traveluser->email, "abc", time()+60);
-            }
-            else{
-                // setcookie('remember', "");
-                Cookie::queue('name', "");
-            }
-            return redirect()->route('userpanel');
-        }
-        return redirect()->route('userlogin');
+    //     if($traveluser){
+    //         session()->put('', $traveluser->email);
+    //         if($req->remember){
+    //             setcookie('remember', $req->phone,time()+3600);
+    //             // Cookie::queue('name', $traveluser->email, "abc", time()+60);
+    //         }
+    //         else{
+    //             // setcookie('remember', "");
+    //             Cookie::queue('name', "");
+    //         }
+    //         return redirect()->route('userpanel');
+    //     }
+    //     return redirect()->route('userlogin');
 
-    }
+    // }
 
     public function userPanel(){
 
         return view('usersinclude.userspanel');
 
     }
+    public function userProfilePage(){
+    
 
-    public function userProfile(Request $request){
+        return view('usersinclude.checkprofile');
+
+    }
+
+
+
+    public function userProfileEdit(Request $request){
+
         $traveluser = Traveluser::where('id', $request->id)->first();
 
-        return view('usersinclude.userprofile')->with('traveluser', $traveluser);
+        return view('usersinclude.usersprofile')->with('traveluser', $traveluser);
 
     }
 
     public function profileEditSubmitted(Request $request){
+
         $traveluser = Traveluser::where('id', $request->id)->first();
 
-        $traveluser ->id = $request ->id;
+        // $traveluser ->id = $request ->id;
         $traveluser ->name = $request ->name;
         
         $traveluser ->password = $request ->password;
         $traveluser ->email = $request ->email;
-        $traveluser ->phone = $request ->phn;
+        $traveluser ->phone = $request ->phone;
         $traveluser ->address = $request ->address;
         $traveluser->save();
 
-        return redirect()->route("userprofile");
+        return redirect()->route("myprofileinfo");
 
 
 
@@ -138,6 +148,19 @@ class UsersController extends Controller
         return view('usersinclude.userslist')->with('travelusers', $traveluser);   
 
     }
+
+
+    public function userProfileDelete(Request $request){
+        
+            $student = Traveluser::where("id",$request->id)->first();
+            $student -> delete();
+            return redirect()->route("logout");
+
+      
+        }
+
+
+
 
 
 

@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\UsersLoginController;
 use App\Http\Controllers\PagesController;
+use App\Http\Controllers\BookingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,24 +44,25 @@ Route::post('/userlogin', [UsersLoginController::class, "loginSubmit"])->name("u
 Route::get('/logout', [UsersLoginController::class, 'userLogout'])->name('logout');
 Route::get('/userpanel', [UsersController::class, 'userPanel'])->name('userpanel');
 
-Route::get('/studentslist', [UsersController::class, 'userList'])->name('studentslist');
+Route::get('/myprofileinfo', [UsersController::class, 'userList'])->name('myprofileinfo');
 
-Route::get('/myprofile/{id}', [UsersController::class, 'userProfile'])->name('myprofile');
+Route::get('/myprofileedit/{id}', [UsersController::class, 'userProfileEdit'])->name('myprofileedit');
 
-Route::post('/myprofile', [UsersController::class, ' profileEditSubmitted'])->name ('myprofilesubmit');
+Route::post('/myprofileedit', [UsersController::class, 'profileEditSubmitted'])->name('myprofileedit');
+Route::get('/myprofileedit/{id}', [UsersController::class, 'userProfileEdit'])->name('myprofileedit');
 
-Route::get('/studentslist', [UsersController::class, 'userList'])->name('studentslist');
-
-// Route::get('/mypanel', [PagesController::class, 'myPanel'])->name('mypanel');
-
+Route::get('/myprofiledelete/{id}', [UsersController::class, 'userProfileDelete'])->name('myprofiledelte');
 
 
+//Booking
+
+Route::get('/book', [BookingController::class, 'bookingPage'])->name('book');
 
 
-// Route::get('/services', function () {
-//     return view('services');
-// });
 
-// Route::get('/elements', function () {
-//     return view('elements');
-// });
+
+
+
+
+
+

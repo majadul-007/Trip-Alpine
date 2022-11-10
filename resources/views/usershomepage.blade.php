@@ -121,30 +121,30 @@
 				<div class="item">
 					<a class="media-thumb" href="images/hero-slider-1.jpg" data-fancybox="gallery">
 						<div class="media-text">
-							<h3>Pragser Wildsee</h3>
-							<span class="location">Italy</span>
+							<h3>Cox's Bazar</h3>
+							<span class="location">Bangladesh</span>
 						</div>
-						<img src="images/hero-slider-1.jpg" alt="Image" class="img-fluid">
+						<img src="images/reg-1.png" alt="Image" class="img-fluid">
 					</a> 
 				</div>
 
 				<div class="item">
 					<a class="media-thumb" href="images/hero-slider-2.jpg" data-fancybox="gallery">
 						<div class="media-text">
-							<h3>Oia</h3>
-							<span class="location">Greece</span>
+						<h3>Sundarban</h3>
+							<span class="location">Bangladesh</span>
 						</div>
-						<img src="images/hero-slider-2.jpg" alt="Image" class="img-fluid">
+						<img src="images/reg-2.png" alt="Image" class="img-fluid">
 					</a> 
 				</div>
 
 				<div class="item">
 					<a class="media-thumb" href="images/hero-slider-3.jpg" data-fancybox="gallery">
 						<div class="media-text">
-							<h3>Perhentian Islands</h3>
-							<span class="location">Malaysia</span>
+						<h3>Shreemangal</h3>
+							<span class="location">Bangladesh</span>
 						</div>
-						<img src="images/hero-slider-3.jpg" alt="Image" class="img-fluid">
+						<img src="images/reg-3.png" alt="Image" class="img-fluid">
 					</a> 
 				</div>
 
@@ -152,14 +152,14 @@
 				<div class="item">
 					<a class="media-thumb" href="images/hero-slider-4.jpg" data-fancybox="gallery">
 						<div class="media-text">
-							<h3>Rialto Bridge</h3>
-							<span class="location">Italy</span>
+							<h3>Sajek</h3>
+							<span class="location">Bangladesh</span>
 						</div>
-						<img src="images/hero-slider-4.jpg" alt="Image" class="img-fluid">
+						<img src="images/reg-2.png" alt="Image" class="img-fluid">
 					</a> 
 				</div>
 
-				<div class="item">
+				<!-- <div class="item">
 					<a class="media-thumb" href="images/hero-slider-5.jpg" data-fancybox="gallery">
 						<div class="media-text">
 							<h3>San Francisco, United States</h3>
@@ -177,7 +177,7 @@
 						</div>
 						<img src="images/hero-slider-2.jpg" alt="Image" class="img-fluid">
 					</a> 
-				</div>
+				</div> -->
 
 			</div>
 
@@ -241,79 +241,92 @@
 			<div class="row">
 				<div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
 					<div class="media-1">
-						<a href="#" class="d-block mb-3"><img src="images/hero-slider-1.jpg" alt="Image" class="img-fluid"></a>
+						<a href="#" class="d-block mb-3"><img src="images/reg-1.png" alt="Image" class="img-fluid"></a>
 						<span class="d-flex align-items-center loc mb-2">
 							<span class="icon-room mr-3"></span>
-							<span>Italy</span>
+							<span>Bangladesh</span>
 						</span>
 						<div class="d-flex align-items-center">
 							<div>
-								<h3><a href="#">Rialto Mountains</a></h3>
+								<h3><a href="#">Cox's Bazar</a></h3>
 								<div class="price ml-auto">
-									<span>$520.00</span>
+									<span>Starting From $620.00</span>
 								</div>
 							</div>
 							
 						</div>
+						<button class="btn book-btn  ml-0 mt-3 ml-auto">
+						<a href="{{ route('book')}}">Book Now</a>	
+						</button>
 						
 					</div>
 				</div>
 				<div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
 					<div class="media-1">
-						<a href="#" class="d-block mb-3"><img src="images/hero-slider-2.jpg" alt="Image" class="img-fluid"></a>
+						<a href="#" class="d-block mb-3"><img src="images/reg-2.png" alt="Image" class="img-fluid"></a>
 						<span class="d-flex align-items-center loc mb-2">
 							<span class="icon-room mr-3"></span>
-							<span>United States</span>
+							<span>Bangladesh</span>
 						</span>
 						<div class="d-flex align-items-center">
 							<div>
-								<h3><a href="#">San Francisco</a></h3>
+								<h3><a href="#">Sundarban</a></h3>
 								<div class="price ml-auto">
-									<span>$520.00</span>
+									<span>$420.00</span>
 								</div>
 							</div>
 							
 						</div>
+						<button class="btn book-btn  ml-0 mt-3 ml-auto">
+						<a href="{{ route('book')}}">Book Now</a>	
+						</button>
 						
 					</div>
 				</div>
 				<div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
 					<div class="media-1">
-						<a href="#" class="d-block mb-3"><img src="images/hero-slider-3.jpg" alt="Image" class="img-fluid"></a>
+						<a href="#" class="d-block mb-3"><img src="images/reg-3.png" alt="Image" class="img-fluid"></a>
 						<span class="d-flex align-items-center loc mb-2">
 							<span class="icon-room mr-3"></span>
-							<span>Malaysia</span>
+							<span>Bangladesh</span>
 						</span>
 						<div class="d-flex align-items-center">
 							<div>
-								<h3><a href="#">Perhentian Islands</a></h3>
+								<h3><a href="#">Shreemangal</a></h3>
 								<div class="price ml-auto">
-									<span>$750.00</span>
+									<span>$320.00</span>
 								</div>
 							</div>
 							
 						</div>
+						<button class="btn book-btn  ml-0 mt-3 ml-auto">
+						<a href="{{ route('book')}}">Book Now</a>	
+						</button>
 						
 					</div>
 				</div>
 				<div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
 					<div class="media-1">
-						<a href="#" class="d-block mb-3"><img src="images/hero-slider-4.jpg" alt="Image" class="img-fluid"></a>
+						<a href="#" class="d-block mb-3"><img src="images/reg-1.png" alt="Image" class="img-fluid"></a>
 
 						<span class="d-flex align-items-center loc mb-2">
 							<span class="icon-room mr-3"></span>
-							<span>Switzerland</span>
+							<span>Bangladesh</span>
 						</span>
 
 						<div class="d-flex align-items-center">
 							<div>
-								<h3><a href="#">Lake Thun</a></h3>
+								<h3><a href="#">Sajek</a></h3>
 								<div class="price ml-auto">
 									<span>$520.00</span>
+									<br>
 								</div>
+								
 							</div>
-							
 						</div>
+						<button class="btn book-btn  ml-0 mt-3 ml-auto">
+						<a href="{{ route('book')}}">Book Now</a>	
+						</button>
 						
 					</div>
 				</div>
@@ -330,7 +343,7 @@
 						<a id="play-video" class="video-play-button" href="https://www.youtube.com/watch?v=mwtbEGNABWU" data-fancybox>
 							<span></span>
 						</a>
-						<img src="images/hero-slider-2.jpg" alt="Image" class="img-fluid rounded-20">
+						<img src="images/reg-1.png" alt="Image" class="img-fluid rounded-20">
 					</figure>
 				</div>
 

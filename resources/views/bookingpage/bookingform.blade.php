@@ -1,12 +1,13 @@
-@include('mainlayouts.header')
+@include('usersinclude.usersheader')
+
 
 <body>
 
+@include('usersinclude.usersnavbar')
+@include('bookinglayout.bookingcontainer')
 
-@include('mainlayouts.navbar')
 
-
-  <div class="hero hero-inner">
+  <!-- <div class="hero hero-inner">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-6 mx-auto text-center">
@@ -17,7 +18,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
   
   
