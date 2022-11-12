@@ -15,7 +15,7 @@
 				<ul class="js-clone-nav d-none d-lg-inline-block text-left site-menu float-right">
 					 
 					
-					<li class=""><a href="/usershomepage">Home</a></li>
+					<li class="{{ request()->routeIs('usershomepage') ? 'active' : '' }}"><a href="{{route('usershomepage')}}">Home</a></li>
 					@if(Session::get('user')) {{Session::get('name')}} 
 
 					<li class="{{ request()->routeIs('userpanel') ? 'active' : '' }}"><a  href="{{route('userpanel')}}">User Panel</a></li>

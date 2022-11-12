@@ -31,47 +31,99 @@
           <div class="custom-block" data-aos="fade-up" data-aos-delay="100">
             <h1 class="">Book Now</h1>
             <hr>
-            <form class="contact-form bg-white">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label class="text-black" for="fname">User Name</label>
-                    <input type="text" class="form-control" id="fname">
-                  </div>
-                </div>
+            <form action="{{route('book')}}" class="contact-form" method="post" data-aos="fade-up" data-aos-delay="50">
+                        {{ csrf_field() }}
+                        <div class="row">
+                            <div class="col-9">
+                                <div class="form-group">
+                                    <label class="text-black" for="fname">User Name</label>
+                                    <input type="text" name="name" value="{{old('name')}}" class="form-control" id="fname">
+                                    @error("name")
+                                    <span class="text-denger">{{$message}}</span>
+                                    @enderror
+                                </div>
+                            </div>
+
+                            <div class="col-9">
+                                <div class="form-group">
+
+                                    <label class="text-black" for="email">Email address</label>
+                                    <input type="email" name="email" value="{{old('email')}}" class="form-control" id="email">
+                                    @error("email")
+                                    <span class="text-denger">{{$message}}</span>
+                                    @enderror
+                                </div>
+                            </div>
+                            
+                          
+                            
+                          
+                            <div class="col-9">
+                                <div class="form-group">
+
+                                    <label class="text-black" for="email">Phone Number</label>
+                                    <input name="phone" value="{{old('phn')}}" class="form-control" id="phone">
+                                    @error("phone")
+                                    <span class="text-denger">{{$message}}</span>
+                                    @enderror
+                                </div>
+                            </div>
+
+                            <div class="col-9">
+                            <div class="form-group">
+                <label class="text-black" for="destination">Destination</label>
+                <input type="text" name="destination" value="{{old('destination')}}" class="form-control" id="fname">
+                                    @error("destination")
+                                    <span class="text-denger">{{$message}}</span>
+                                    @enderror
+
                 
-              </div>
-              <div class="form-group">
-                <label class="text-black" for="email">Email address</label>
-                <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
-                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-              </div>
-              <div class="form-group">
-                <label class="text-black" for="password">Password</label>
-                <input type="password" class="form-control" id="password">
-              </div>
-              <div class="form-group">
-                <label class="text-black" for="message">Message</label>
-                <textarea name="" class="form-control" id="message" cols="30" rows="5"></textarea>
-              </div>
-              <div class="form-group">
-                <label class="text-black" for="select">Select</label>
-
-                <select name="" id="select" class="custom-select">
-                  <option value="">Untree.co</option>
-                  <option value="">Offers high quality free template</option>
-                </select>
 
               </div>
-              <div class="form-group">
-                <label class="control control--checkbox">
-                  <span class="caption">Custom checkbox</span>
-                  <input type="checkbox" checked="checked" />
-                  <div class="control__indicator"></div>
-                </label>
+                            </div>
+
+                            <div class="col-9">
+                            <div class="form-group">
+                <label class="text-black" for="members">Total Members</label>
+                <input type="text" name="members" value="{{old('members')}}" class="form-control" id="fname">
+                                    @error("members")
+                                    <span class="text-denger">{{$message}}</span>
+                                    @enderror
+
+                
+
               </div>
-              <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
+                            </div>
+                            <div class="col-9">
+                            <div class="form-group">
+                <label class="text-black" for="days">Total Days</label>
+                <input type="text" name="days" value="{{old('name')}}" class="form-control" id="fname">
+                                    @error("days")
+                                    <span class="text-denger">{{$message}}</span>
+                                    @enderror
+
+                <!-- <select name="" id="select" class="custom-select">
+                  <option value="">5</option>
+                  <option value="">6</option>
+                  <option value="">7</option>
+                </select> -->
+
+              </div>
+                            </div>
+                            <!-- <div class="col-9">
+                            </div>
+                            <div class="col-9">
+                            </div> -->
+                        </div>
+                        <!-- 
+            <div class="form-group">
+              <label class="text-black" for="message">Message</label>
+              <textarea name="" class="form-control" id="message" cols="30" rows="5"></textarea>
+            </div> -->
+
+                        <button type="submit" class="btn btn-success">Book Now</button>
+                    </form>
+            
           </div>
 
           
