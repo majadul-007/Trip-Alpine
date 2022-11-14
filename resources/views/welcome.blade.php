@@ -18,37 +18,7 @@
 
 						<div class="row">
 							<div class="col-12">
-								<form class="form">
-									<div class="row mb-2">
-										<div class="col-sm-12 col-md-6 mb-3 mb-lg-0 col-lg-4">
-											<select name="" id="" class="form-control custom-select">
-												<option value="">Destination</option>
-												<option value="">Peru</option>
-												<option value="">Japan</option>
-												
-											</select>
-										</div>
-										<div class="col-sm-12 col-md-6 mb-3 mb-lg-0 col-lg-5">
-											<input type="text" class="form-control" name="daterange">
-										</div>
-										<div class="col-sm-12 col-md-6 mb-3 mb-lg-0 col-lg-3">
-											<input type="text" class="form-control" placeholder="# of People">
-										</div>
-
-									</div>    
-									<div class="row align-items-center">
-										<div class="col-sm-12 col-md-6 mb-3 mb-lg-0 col-lg-4">
-											<input type="submit" class="btn btn-primary btn-block" value="Search">
-										</div>
-										<div class="col-lg-8">
-											<label class="control control--checkbox mt-3">
-												<span class="caption">Save this search</span>
-												<input type="checkbox" checked="checked" />
-												<div class="control__indicator"></div>
-											</label>
-										</div>
-									</div>
-								</form>
+								
 							</div>
 						</div>
 					</div>
@@ -233,6 +203,7 @@
 						<img src="images/hero-slider-2.jpg" alt="Image" class="img-fluid">
 					</a> 
 				</div>
+				
 
 			</div>
 
@@ -299,11 +270,11 @@
 						<a href="#" class="d-block mb-3"><img src="images/reg-1.png" alt="Image" class="img-fluid"></a>
 						<span class="d-flex align-items-center loc mb-2">
 							<span class="icon-room mr-3"></span>
-							<span>Italy</span>
+							<span>Bangladesh</span>
 						</span>
 						<div class="d-flex align-items-center">
 							<div>
-								<h3><a href="#">Rialto Mountains</a></h3>
+								<h3><a href="#">Cox's Bazar</a></h3>
 								<div class="price ml-auto">
 									<span>$520.00</span>
 								</div>
@@ -318,11 +289,11 @@
 						<a href="#" class="d-block mb-3"><img src="images/reg-2.png" alt="Image" class="img-fluid"></a>
 						<span class="d-flex align-items-center loc mb-2">
 							<span class="icon-room mr-3"></span>
-							<span>United States</span>
+							<span>Bangladesh</span>
 						</span>
 						<div class="d-flex align-items-center">
 							<div>
-								<h3><a href="#">San Francisco</a></h3>
+								<h3><a href="#">Shylet</a></h3>
 								<div class="price ml-auto">
 									<span>$520.00</span>
 								</div>
@@ -337,13 +308,32 @@
 						<a href="#" class="d-block mb-3"><img src="images/reg-3.png" alt="Image" class="img-fluid"></a>
 						<span class="d-flex align-items-center loc mb-2">
 							<span class="icon-room mr-3"></span>
-							<span>Malaysia</span>
+							<span>Bangladesh</span>
 						</span>
 						<div class="d-flex align-items-center">
 							<div>
-								<h3><a href="#">Perhentian Islands</a></h3>
+								<h3><a href="#">Sundarban</a></h3>
 								<div class="price ml-auto">
 									<span>$750.00</span>
+								</div>
+							</div>
+							
+						</div>
+						
+					</div>
+				</div>
+				<div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
+					<div class="media-1">
+						<a href="#" class="d-block mb-3"><img src="images/reg-2.png" alt="Image" class="img-fluid"></a>
+						<span class="d-flex align-items-center loc mb-2">
+							<span class="icon-room mr-3"></span>
+							<span>Bangladesh</span>
+						</span>
+						<div class="d-flex align-items-center">
+							<div>
+								<h3><a href="#">Shylet</a></h3>
+								<div class="price ml-auto">
+									<span>$420.00</span>
 								</div>
 							</div>
 							

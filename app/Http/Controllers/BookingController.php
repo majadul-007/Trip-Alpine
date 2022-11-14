@@ -63,21 +63,40 @@ class BookingController extends Controller
 
     }
 
-    public function myorderUpdate(Request $request){
+    public function orderUpdate(Request $request){
         $userorders = Booking::where('id', $request->id)->first();
 
-        return view('usersinclude.usersprofile')->with('userorder', $userorders);
+        return view('bookingpage.bookingupdate')->with('userorder', $userorders);
+
+    }
+
+    public function orderSubmitted(Request $request){
+        $userorders = Booking::where('id', $request->id)->first();
+        $userorders->name = $request->name;
+        $userorders->email = $request->email;
+        $userorders->phone = $request->phone;
+        
+        $userorders->destination = $request ->destination;
+        $userorders->members = $request ->members;
+        $userorders->days = $request ->days;
+
+       
+        
+        $userorders -> save();
+
+        return redirect('myorders');
+
 
     }
 
 
-    public function orderList(){
+    public function ordersList(){
         $userorders = Booking::all();
         return view('bookingpage.bookinglist')->with('userorders', $userorders);   
 
     }
 
-    public function orderCancel(Request $request){
+    public function  orderCancel(Request $request){
 
         $userorders = Booking::where("id",$request->id)->first();
         $userorders -> delete();

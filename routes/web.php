@@ -42,31 +42,31 @@ Route::post('/userlogin', [UsersLoginController::class, "loginSubmit"])->name("u
 
 
 Route::get('/logout', [UsersLoginController::class, 'userLogout'])->name('logout');
-Route::get('/userpanel', [UsersController::class, 'userPanel'])->name('userpanel');
+Route::get('/userpanel', [UsersController::class, 'userPanel'])->name('userpanel')->middleware('checkuser');
 
-Route::get('/myprofileinfo', [UsersController::class, 'userList'])->name('myprofileinfo');
+Route::get('/myprofileinfo', [UsersController::class, 'userList'])->name('myprofileinfo')->middleware('checkuser');
 
-Route::get('/myprofileedit/{id}', [UsersController::class, 'userProfileEdit'])->name('myprofileedit');
+Route::get('/myprofileedit/{id}', [UsersController::class, 'userProfileEdit'])->name('myprofileedit')->middleware('checkuser');
 
-Route::post('/myprofileedit', [UsersController::class, 'profileEditSubmitted'])->name('myprofileedit');
+Route::post('/myprofileedit', [UsersController::class, 'profileEditSubmitted'])->name('myprofileedit')->middleware('checkuser');
 // Route::get('/myprofileedit/{id}', [UsersController::class, 'userProfileEdit'])->name('myprofileedit');
 
-Route::get('/myprofiledelete/{id}', [UsersController::class, 'userProfileDelete'])->name('myprofiledelte');
+Route::get('/myprofiledelete/{id}', [UsersController::class, 'userProfileDelete'])->name('myprofiledelte')->middleware('checkuser');
 
 
 //Booking
 
 
 
-Route::get('/book', [BookingController::class, 'bookingPackage'])->name('book');
-Route::post('/book', [BookingController::class, 'bookingSubmitted'])->name('booknow');
-Route::get('/myporders', [BookingController::class, 'ordersList'])->name('myorders');
+Route::get('/book', [BookingController::class, 'bookingPackage'])->name('book')->middleware('checkuser');
+Route::post('/book', [BookingController::class, 'bookingSubmitted'])->name('booknow')->middleware('checkuser');
+Route::get('/myorders', [BookingController::class, 'ordersList'])->name('myorders')->middleware('checkuser');
 
-Route::get('/myorderupdate/{id}', [UsersController::class, 'OrderUpdate'])->name('myorderupdate');
+Route::get('/myorderupdate/{id}', [BookingController::class, 'orderUpdate'])->name('myorderupdate')->middleware('checkuser');
 
-Route::post('/myorderupdate', [UsersController::class, 'orderSubmitted'])->name('myorderupdate');
+Route::post('/myorderupdate', [BookingController::class, 'orderSubmitted'])->name('myorderupdate')->middleware('checkuser');
 
-Route::get('/myordercancel/{id}', [UsersController::class, 'orderCancel'])->name('myordercancel');
+Route::get('/myordercancel/{id}', [BookingController::class, 'orderCancel'])->name('myordercancel')->middleware('checkuser');
 
 
 

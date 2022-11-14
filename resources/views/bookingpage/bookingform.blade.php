@@ -3,8 +3,8 @@
 
 <body>
 
-@include('usersinclude.usersnavbar')
-@include('bookinglayout.bookingcontainer')
+  @include('usersinclude.usersnavbar')
+  @include('bookinglayout.bookingcontainer')
 
 
   <!-- <div class="hero hero-inner">
@@ -20,11 +20,11 @@
     </div>
   </div> -->
 
-  
-  
+
+
   <div class="untree_co-section">
     <div class="container my-5">
-     
+
 
       <div class="row justify-content-center">
         <div class="col-lg-6">
@@ -32,101 +32,96 @@
             <h1 class="">Book Now</h1>
             <hr>
             <form action="{{route('book')}}" class="contact-form" method="post" data-aos="fade-up" data-aos-delay="50">
-                        {{ csrf_field() }}
-                        <div class="row">
-                            <div class="col-9">
-                                <div class="form-group">
-                                    <label class="text-black" for="fname">User Name</label>
-                                    <input type="text" name="name" value="{{old('name')}}" class="form-control" id="fname">
-                                    @error("name")
-                                    <span class="text-denger">{{$message}}</span>
-                                    @enderror
-                                </div>
-                            </div>
+              {{ csrf_field() }}
+              <div class="row">
+                <div class="col-9">
+                  <div class="form-group">
+                    <label class="text-black" for="fname">User Name</label>
+                    <input type="text" name="name" value="{{old('name')}}" class="form-control" id="fname">
+                    @error("name")
+                    <span class="text-denger">{{$message}}</span>
+                    @enderror
+                  </div>
+                </div>
 
-                            <div class="col-9">
-                                <div class="form-group">
+                <div class="col-9">
+                  <div class="form-group">
 
-                                    <label class="text-black" for="email">Email address</label>
-                                    <input type="email" name="email" value="{{old('email')}}" class="form-control" id="email">
-                                    @error("email")
-                                    <span class="text-denger">{{$message}}</span>
-                                    @enderror
-                                </div>
-                            </div>
-                            
-                          
-                            
-                          
-                            <div class="col-9">
-                                <div class="form-group">
+                    <label class="text-black" for="email">Email address</label>
+                    <input type="email" name="email" value="{{old('email')}}" class="form-control" id="email">
+                    @error("email")
+                    <span class="text-denger">{{$message}}</span>
+                    @enderror
+                  </div>
+                </div>
 
-                                    <label class="text-black" for="email">Phone Number</label>
-                                    <input name="phone" value="{{old('phn')}}" class="form-control" id="phone">
-                                    @error("phone")
-                                    <span class="text-denger">{{$message}}</span>
-                                    @enderror
-                                </div>
-                            </div>
 
-                            <div class="col-9">
-                            <div class="form-group">
-                <label class="text-black" for="destination">Destination</label>
-                <input type="text" name="destination" value="{{old('destination')}}" class="form-control" id="fname">
-                                    @error("destination")
-                                    <span class="text-denger">{{$message}}</span>
-                                    @enderror
 
-                
 
-              </div>
-                            </div>
+                <div class="col-9">
+                  <div class="form-group">
 
-                            <div class="col-9">
-                            <div class="form-group">
-                <label class="text-black" for="members">Total Members</label>
-                <input type="text" name="members" value="{{old('members')}}" class="form-control" id="fname">
-                                    @error("members")
-                                    <span class="text-denger">{{$message}}</span>
-                                    @enderror
+                    <label class="text-black" for="email">Phone Number</label>
+                    <input name="phone" value="{{old('phn')}}" class="form-control" id="phone">
+                    @error("phone")
+                    <span class="text-denger">{{$message}}</span>
+                    @enderror
+                  </div>
+                </div>
 
-                
+                <div class="col-9">
+                  <div class="form-group">
+                    <label class="text-black" for="destination">Destination</label>
+                    <input type="text" name="destination" value="{{old('destination')}}" class="form-control" id="fname">
+                    @error("destination")
+                    <span class="text-denger">{{$message}}</span>
+                    @enderror
 
-              </div>
-                            </div>
-                            <div class="col-9">
-                            <div class="form-group">
-                <label class="text-black" for="days">Total Days</label>
-                <input type="text" name="days" value="{{old('name')}}" class="form-control" id="fname">
-                                    @error("days")
-                                    <span class="text-denger">{{$message}}</span>
-                                    @enderror
 
-                <!-- <select name="" id="select" class="custom-select">
-                  <option value="">5</option>
-                  <option value="">6</option>
-                  <option value="">7</option>
-                </select> -->
 
-              </div>
-                            </div>
-                            <!-- <div class="col-9">
+                  </div>
+                </div>
+
+                <div class="col-9">
+                  <div class="form-group">
+                    <label class="text-black" for="members">Total Members</label>
+                    <input type="text" name="members" value="{{old('members')}}" class="form-control" id="fname">
+                    @error("members")
+                    <span class="text-denger">{{$message}}</span>
+                    @enderror
+
+
+
+                  </div>
+                </div>
+                <div class="col-9">
+                  <div class="form-group">
+                    <label class="text-black" for="days">Total Days</label>
+                    <input type="text" name="days" value="{{old('name')}}" class="form-control" id="fname">
+                    @error("days")
+                    <span class="text-denger">{{$message}}</span>
+                    @enderror
+
+                    
+                  </div>
+                </div>
+                <!-- <div class="col-9">
                             </div>
                             <div class="col-9">
                             </div> -->
-                        </div>
-                        <!-- 
+              </div>
+              <!-- 
             <div class="form-group">
               <label class="text-black" for="message">Message</label>
               <textarea name="" class="form-control" id="message" cols="30" rows="5"></textarea>
             </div> -->
 
-                        <button type="submit" class="btn btn-success">Book Now</button>
-                    </form>
-            
+              <button type="submit" class="btn btn-success">Book Now</button>
+            </form>
+
           </div>
 
-          
+
 
         </div>
 
@@ -156,12 +151,12 @@
             </div>
           </div> <!-- END .custom-block -->
 
-          
+
         </div>
-        
+
       </div>
 
-     
+
 
     </div>
   </div>

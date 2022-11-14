@@ -1391,3 +1391,31 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
         background-color: mediumspringgreen !important;
         margin-left: 0px !important;
       }
+      .order-btn{
+        background-color: green !important;
+
+      }
+      .cancel-btn{
+        background-color: red ;
+        /* padding: 16px; */
+      }
+      .cancel-btn a{
+        color: #fff !important;
+
+      }
+      .order-btn:hover{
+        transform: scale(1.02, 1.02);
+      }
+      .cancel-btn:hover{
+        /* transform: scale(1.02); */
+        transform: scale(1.02, 1.02);
+      }
+      .panel-sidebar{
+        margin-top: 200px;
+      }
+      .orders-panel{
+        margin-top: -270px;
+      }
+      .order-list{
+        margin-bottom: 170px !important;
+      }

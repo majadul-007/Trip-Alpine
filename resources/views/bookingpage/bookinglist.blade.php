@@ -5,21 +5,22 @@
 
     @include('usersinclude.usersnavbar')
     @include('usersinclude.userscontainer')
+    @include('bookinglayout.panelsidebar')
 
 
-@foreach ($userorder as $userorders)
-    <div class="untree_co-section">
+    @foreach ($userorders as $userorder)
+    <div class="untree_co-section orders-panel">
         <div class="container">
             <div class="row">
-                <div class="col-lg-9 mb-3 ml-auto">
-                    <h2 class="section-title text-justify">My Profile</h2>
+                <div class="col-lg-8 mb-5 order-list ml-auto">
+                    <h2 class="section-title text-justify">Orders</h2>
                     <form action="" class="contact-form" method="" data-aos="fade-up" data-aos-delay="200">
                         {{ csrf_field() }}
                         <div class="row">
                             <div class="col-9">
                                 <div class="form-group">
                                     <label class="text-black" for="fname">User Name</label>
-                                    <input type="text" name="name" value="{{$userorders->name}}" class="form-control" id="fname">
+                                    <input type="text" name="name" value="{{$userorder->name}}" class="form-control" id="fname">
                                     @error("name")
                                     <span class="text-denger">{{$message}}</span>
                                     @enderror
@@ -30,51 +31,70 @@
                                 <div class="form-group">
 
                                     <label class="text-black" for="email">Email address</label>
-                                    <input type="email" name="email" value="{{$userorders->email}}" class="form-control" id="email">
+                                    <input type="email" name="email" value="{{$userorder->email}}" class="form-control" id="email">
                                     @error("email")
                                     <span class="text-denger">{{$message}}</span>
                                     @enderror
                                 </div>
                             </div>
-                            <div class="col-9">
-                                <div class="form-group">
 
-                                    <label class="text-black">Password</label>
-                                    <input type="password" name="password" value="{{$userorders->password}}" class="form-control">
-                                    @error("password")
-                                    <span class="text-denger">{{$message}}</span>
-                                    @enderror
-                                </div>
-                            </div>
-                            
-                            <div class="col-9">
-                                <div class="form-group">
 
-                                    <label class="text-black" for="email">Address</label>
-                                    <input name="address" value="{{$userorders->address}}" class="form-control">
-                                    @error("address")
-                                    <span class="text-denger">{{$message}}</span>
-                                    @enderror
-                                </div>
-                            </div>
+
                             <div class="col-9">
                                 <div class="form-group">
 
                                     <label class="text-black" for="email">Phone Number</label>
-                                    <input name="phone" value="{{$userorders->phone}}" class="form-control" id="phone">
+                                    <input name="phone" value="{{$userorder->phone}}" class="form-control" id="phone">
                                     @error("phone")
                                     <span class="text-denger">{{$message}}</span>
                                     @enderror
                                 </div>
                             </div>
-                        </div>
-                       
 
-                        <button  class="btn btn-success"><a href="/myprofileedit/{{$userorders->id}}">Update Account</a></button>
-                        <button  class="btn btn-danger"><a href="/myprofiledelete/{{$userorders->id}}">Delete Account</a></button>
+                            <div class="col-9">
+                                <div class="form-group">
+                                    <label class="text-black" for="destination">Destination</label>
+                                    <input type="text" name="destination" value="{{$userorder->destination}}" class="form-control" id="fname">
+                                    @error("destination")
+                                    <span class="text-denger">{{$message}}</span>
+                                    @enderror
+
+
+
+                                </div>
+                            </div>
+
+                            <div class="col-9">
+                                <div class="form-group">
+                                    <label class="text-black" for="members">Total Members</label>
+                                    <input type="text" name="members" value="{{$userorder->members}}" class="form-control" id="fname">
+                                    @error("members")
+                                    <span class="text-denger">{{$message}}</span>
+                                    @enderror
+
+
+
+                                </div>
+                            </div>
+                            <div class="col-9">
+                                <div class="form-group">
+                                    <label class="text-black" for="days">Total Days</label>
+                                    <input type="text" name="days" value="{{$userorder->days}}" class="form-control" id="fname">
+                                    @error("days")
+                                    <span class="text-denger">{{$message}}</span>
+                                    @enderror
+
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <button class="btn order-btn mr-3"><a href="/myorderupdate/{{$userorder->id}}">Update Order</a></button>
+                        <button class="btn cancel-btn"><a href="/myordercancel/{{$userorder->id}}">Cancel Order</a></button>
                     </form>
                 </div>
-                
+
             </div>
         </div>
     </div>
@@ -83,11 +103,8 @@
 
 
 
-@include('usersinclude.usersfooter')
+    @include('usersinclude.usersfooter')
 
 </body>
 
 </html>
-
-
-
