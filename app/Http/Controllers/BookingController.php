@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Booking;
+use App\Models\Traveluser;
 
 class BookingController extends Controller
 {
@@ -12,6 +13,7 @@ class BookingController extends Controller
 
    
     public function bookingPackage(){
+        
         return view("bookingpage.bookingform");
     }
 
@@ -41,7 +43,9 @@ class BookingController extends Controller
         ] 
         );
 
+
         $bookings = new Booking();
+        $bookings->traveluserid = $request->traveluserid;
         $bookings->name = $request->name;
         $bookings->email = $request->email;
         $bookings->phone = $request->phone;
@@ -72,6 +76,7 @@ class BookingController extends Controller
 
     public function orderSubmitted(Request $request){
         $userorders = Booking::where('id', $request->id)->first();
+        
         $userorders->name = $request->name;
         $userorders->email = $request->email;
         $userorders->phone = $request->phone;
@@ -103,5 +108,14 @@ class BookingController extends Controller
         return redirect()->route("myorders");
 
 
+    }
+
+    //update
+    public function orderUser(){
+
+        //Eloquent
+
+        $bookings = Booking::where('traveluserid', 10)->first();
+        return $bookings->assignedUser();
     }
 }

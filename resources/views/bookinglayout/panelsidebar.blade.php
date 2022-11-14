@@ -3,12 +3,13 @@
         <div class="row align-items-center">
             <div class="col-lg-3 mt-5">
                 <div class="list-group">
-                    <a href="#" class="list-group-item list-group-item-action active">
+                    <!-- <a href="#" class="list-group-item list-group-item-action ">
                         My Profile
-                    </a>
+                    </a> -->
                    
-                    <a href="#" class="list-group-item list-group-item-action">My Orders</a>
-                    <a href="#" class="list-group-item list-group-item-action">Logout</a>
+                    <a href="#" class="list-group-item list-group-item-action active">My Orders</a>
+                    <a href="#" class="list-group-item list-group-item-action ">Settings</a>
+                    <a href="{{route('logout')}}" class="list-group-item list-group-item-action">Logout</a>
                     
                 </div>
 

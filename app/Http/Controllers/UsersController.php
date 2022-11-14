@@ -7,6 +7,8 @@ use App\Models\Traveluser;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Cookie;
+use App\Models\Booking;
+use App\Models\User;
 
 class UsersController extends Controller
 {
@@ -78,25 +80,7 @@ class UsersController extends Controller
 
     }
 
-    // public function loginSubmit(Request $req){
-        
-    //     $traveluser = traveluser::where('email', $req->email)->where('password', $req->password)->first();
-
-    //     if($traveluser){
-    //         session()->put('', $traveluser->email);
-    //         if($req->remember){
-    //             setcookie('remember', $req->phone,time()+3600);
-    //             // Cookie::queue('name', $traveluser->email, "abc", time()+60);
-    //         }
-    //         else{
-    //             // setcookie('remember', "");
-    //             Cookie::queue('name', "");
-    //         }
-    //         return redirect()->route('userpanel');
-    //     }
-    //     return redirect()->route('userlogin');
-
-    // }
+    
 
     public function userPanel(){
 
@@ -119,6 +103,16 @@ class UsersController extends Controller
         return view('usersinclude.usersprofile')->with('traveluser', $traveluser);
 
     }
+
+    //lastupdate
+    // public function getProfileinfo(Request $request){
+    //     $traveluser = Traveluser::where('id', $request->id)->first();
+
+    //     return view('usersinclude.usersprofile')->with('traveluser', $traveluser);
+
+    // }
+    
+    //lastupdate end
 
     public function profileEditSubmitted(Request $request){
 
@@ -159,19 +153,34 @@ class UsersController extends Controller
       
         }
 
+        // update
+
+
+        public function userOrders(Request $request){
+
+            // $t = Teacher::where('id',1)->first();
+            $t = Traveluser::where('id',$request->id)->first();
+            // return $t->id;
+            //hasmany
+            // return $t->courses;
+    
+            //eloquent
+            return $t->assignedOrders();
+        }
 
 
 
 
 
-    public function userLogout(Request $request){
 
-        Auth::logout();
-        $request->session()->invalidate();
-        $request->session()->regenerateToken();
+    // public function userLogout(Request $request){
 
-        return redirect()
-            -> route('usershomepage');
+    //     Auth::logout();
+    //     $request->session()->invalidate();
+    //     $request->session()->regenerateToken();
 
-    }
+    //     return redirect()
+    //         -> route('usershomepage');
+
+    // }
 }

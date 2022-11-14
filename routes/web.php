@@ -5,6 +5,7 @@ use App\Http\Controllers\UsersController;
 use App\Http\Controllers\UsersLoginController;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\BookingController;
+use App\Http\Controllers\OrderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -52,6 +53,13 @@ Route::post('/myprofileedit', [UsersController::class, 'profileEditSubmitted'])-
 // Route::get('/myprofileedit/{id}', [UsersController::class, 'userProfileEdit'])->name('myprofileedit');
 
 Route::get('/myprofiledelete/{id}', [UsersController::class, 'userProfileDelete'])->name('myprofiledelte')->middleware('checkuser');
+
+
+// last update
+
+Route::get('/user/orders/{id}', [UsersController::class, 'userOrders'])->name('allorders');
+Route::get('/orders', [BookingController::class, 'orderUser'])->name('orders');
+
 
 
 //Booking

@@ -18,7 +18,7 @@
 					<li class="{{ request()->routeIs('usershomepage') ? 'active' : '' }}"><a href="{{route('usershomepage')}}">Home</a></li>
 					@if(Session::get('user')) {{Session::get('name')}} 
 
-					<li class="{{ request()->routeIs('userpanel') ? 'active' : '' }}"><a  href="{{route('userpanel')}}">User Panel</a></li>
+					<li class="{{ request()->routeIs('myorders') ? 'active' : '' }}"><a  href="{{route('myorders')}}">My Panel</a></li>
 					
 										
 					<li class="{{ request()->routeIs('myprofileinfo') ? 'active' : '' }}"><a class="" href="{{route('myprofileinfo')}}">My Profile</a></li>

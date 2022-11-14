@@ -9,4 +9,12 @@ class Traveluser extends Model
 {
     use HasFactory;
     public $timestamps = false;
+
+    public function assignedOrders(){
+
+        return Booking::where('traveluserid', $this->id )->get();
+
+
+
+    }
 }

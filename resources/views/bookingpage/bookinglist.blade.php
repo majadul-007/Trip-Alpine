@@ -20,7 +20,7 @@
                             <div class="col-9">
                                 <div class="form-group">
                                     <label class="text-black" for="fname">User Name</label>
-                                    <input type="text" name="name" value="{{$userorder->name}}" class="form-control" id="fname">
+                                    <input type="text" name="" value="{{$userorder->name}}" class="form-control" id="fname">
                                     @error("name")
                                     <span class="text-denger">{{$message}}</span>
                                     @enderror

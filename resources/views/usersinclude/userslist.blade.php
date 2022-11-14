@@ -16,6 +16,13 @@
                     <form action="" class="contact-form" method="" data-aos="fade-up" data-aos-delay="200">
                         {{ csrf_field() }}
                         <div class="row">
+                        <div class="col-9">
+                                <div class="form-group">
+                                    <label class="text-black" for="fname">User Id</label>
+                                    <input type="text" name="name" value="{{$traveluser->id}}" class="form-control" readonly>
+                                    
+                                </div>
+                            </div>
                             <div class="col-9">
                                 <div class="form-group">
                                     <label class="text-black" for="fname">User Name</label>

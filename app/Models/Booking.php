@@ -9,4 +9,11 @@ class Booking extends Model
 {
     use HasFactory;
     public $timestamps = false;
+    public function assignedUser(){
+
+        return Traveluser::where('id', $this->traveluserid )->first();
+
+
+
+    }
 }

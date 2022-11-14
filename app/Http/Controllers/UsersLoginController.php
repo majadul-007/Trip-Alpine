@@ -36,18 +36,11 @@ class UsersLoginController extends Controller
                 // session()->put('name', $traveluser->email);
                 $request->session()->put('user',$traveluser->email);
                 setcookie('remember',$request->email, time()+36000);
-                return redirect()->route('userpanel');
+                return redirect()->route('usershomepage');
                 
             }
             
-            // if($req->remember){
-            //     // setcookie('remember', $req->phone,time()+3600);
-            //     Cookie::queue('name', $traveluser->email, "abc", time()+60);
-            // }
-            // else{
-            //     // setcookie('remember', "");
-            //     Cookie::queue('name', "");
-            // }
+            
         }
         return back();
 

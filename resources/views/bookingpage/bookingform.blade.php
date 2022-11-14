@@ -33,7 +33,18 @@
             <hr>
             <form action="{{route('book')}}" class="contact-form" method="post" data-aos="fade-up" data-aos-delay="50">
               {{ csrf_field() }}
+              <!-- <input type="text" name="traveluserid" value="{{old('traveluserid')}}" class="form-control" placeholder="Use Your User id"> -->
               <div class="row">
+              <div class="col-9">
+                  <div class="form-group">
+                    <label class="text-black" for="fname">Enter User Id</label>
+                    <input type="text" name="traveluserid" value="{{old('traveluserid')}}" class="form-control" id="fname">
+                    @error("name")
+                    <span class="text-denger">{{$message}}</span>
+                    @enderror
+                  </div>
+                </div>
+
                 <div class="col-9">
                   <div class="form-group">
                     <label class="text-black" for="fname">User Name</label>
